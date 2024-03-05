@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap");
+body{
+  font-family:"League Spartan", sans-serif;
+  overflow-x:hidden !important;
+  font-size:18px;
+  color:#24272c;
+  font-weight:400;
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+  font-family:"League Spartan",
+  sans-serif;
+  line-height:1.5;
+  font-weight:600 !important
+}
+
+table {
+  margin: 50px auto;
+  max-width: 900px;
+  outline: 1px solid #ccc;
+}
+
+.form-login {
+  max-width: 400px;
+  padding: 50px;
+  margin: 50px auto;
+  outline: 1px solid #ccc;
+}
+
+.card-user {
+  margin: 50px auto;
+  outline: 1px solid #ccc;
+  width: 28rem;
+}
+
+.btn-register-home {
+  color: white;
+  background-color:  #925ADD;
+  padding: 14px 35px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+
+.btn-register-home:hover {
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+}
+
+.img-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.img-schedule{
+  width: 40rem;
+  height: 38rem;
+}
+
+.text-justified{
+  text-align: justify;
+}
+
+.btn-form {
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+}
+
+.text-big {
+  font-size: 3.5rem;
+}
+
+.btn-form-call-action {
+  padding: 15px 20px;
+  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+  outline: none;
+}
+
+.input-form-call-action {
+  width: 18rem;
+  border-radius: 0px;
+  padding: 15px 20px;
+}
+.process-panel{
+  max-width: 20rem;
+  background-color: white;
+  outline: 1px solid #b6b2b2;
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+
+.process-panel-text-step{
+  border-radius: 8px;
+  width: 6rem;
+  display: flex;
+  align-self: center;
+  padding: 4px;
+  background-color: #ccc;
+}
