@@ -27,7 +27,7 @@
       <label class="form-text fs-5" for="password">Password</label>
       <input required type="password" class="form-control" name="password" id="password" placeholder="Password">
   </div>
-    <button type="submit" class="btn-form btn btn-dark input-group mt-3">submit</button>
+    <button type="submit" class="btn-form btn text-white p-2 fs-5 fw-medium input-group mt-3">submit</button>
 </form>
 
 @endsection

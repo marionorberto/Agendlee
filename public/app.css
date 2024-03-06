@@ -1,5 +1,21 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap");
+:root{
+  --color-violet-primary: #925ADD;
+  --color-violet-secondary: #9733EE;
+}
+.color-violet-primary{
+  color: var(--color-violet-primary);
+}
+
+.color-violet-secondary{
+  color: var(--color-violet-primary);
+}
+
 body{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family:"League Spartan", sans-serif;
   overflow-x:hidden !important;
   font-size:18px;
@@ -7,12 +23,22 @@ body{
   font-weight:400;
   background-color: #f9fcff;
   background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
   font-family:"League Spartan",
   sans-serif;
   line-height:1.5;
   font-weight:600 !important
+}
+
+.blade-icons {
+  font-size: 10px;
+  width: 30px;
+  height: 30px;
 }
 
 table {
@@ -44,7 +70,7 @@ table {
 
 
 .btn-register-home:hover {
-  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+  background-color: #9733EE;
 }
 
 .img-logo {
@@ -64,6 +90,11 @@ table {
 
 .btn-form {
   background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+  transition: 0.5s;
+}
+
+.btn-form:hover {
+  background-image: linear-gradient(to left, #9733EE 51%, #DA22FF 100%, #9733EE 51%);
 }
 
 .text-big {
@@ -72,8 +103,13 @@ table {
 
 .btn-form-call-action {
   padding: 15px 20px;
-  background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
-  outline: none;
+  background-color: #925ADD;
+  border-radius: 0px;
+  width: 28%;
+}
+
+.btn-form-call-action:hover {
+  background-color: #9733EE;
 }
 
 .input-form-call-action {
@@ -82,20 +118,105 @@ table {
   padding: 15px 20px;
 }
 .process-panel{
-  max-width: 20rem;
+  max-width: 22rem;
+  min-height: 10rem;
   background-color: white;
-  outline: 1px solid #b6b2b2;
+  outline: 1px solid #c8c4c4;
   text-align: center;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 12px;
 }
 
 
 .process-panel-text-step{
-  border-radius: 8px;
-  width: 6rem;
+  border-radius: 10px;
+  width: 5rem;
+  height: 2.5rem;
+  padding: 4px 7px;
+  text-align: center;
+  background-color: #e1e0e0;
   display: flex;
   align-self: center;
-  padding: 4px;
-  background-color: #ccc;
+  justify-content: center;
 }
+
+footer {
+  background-color: #925ADD;
+  padding-top: 60px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.img-login{
+  width: 500px;
+  height: 300px;
+}
+
+.floating-image-container {
+   overflow: hidden;
+   position: relative;
+}
+
+.img-schedule {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    animation: floatAnimation 2.3s infinite alternate ease-in-out;
+}
+
+@keyframes floatAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+.process-panel {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.26s ease-in-out;
+}
+
+.process-panel:hover {
+  transform: translate(0, -14px);
+}
+
+.link-forget-password{
+  color: #925ADD;
+}
+
+.img-about{
+  height: 330px;
+  width: 600px;
+}
+
+.card-overview{
+  width: 25rem;
+  height: 20rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 8px;
+    transition: transform 0.26s ease-in-out;
+}
+
+.card-overview:hover{
+    transform: translateY(-10px);
+}
+
+.textarea-coment {
+  outline: 1px solid #ccc;
+  padding: 17px;
+  border-radius: 7px;
+}
+
