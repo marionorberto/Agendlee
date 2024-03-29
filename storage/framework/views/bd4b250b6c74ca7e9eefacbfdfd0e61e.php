@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <a class="text-decoration-none  fs-3 fw-bolder text-dark" href="/">
-        <img src="{{URL::to('images/shape-28.svg')}}" alt="" srcset=""> Agendle
+        <img src="<?php echo e(URL::to('images/shape-28.svg')); ?>" alt="" srcset=""> Agendle
       </a>
       <div class="col-12 col-md-6 col-lg-3">
         <div>
@@ -16,7 +16,7 @@
         <div class="footer-widget">
           <h3 class="text-white fw-bold">important links</h6>
             <ul class="list-unstyled">
-              <li> <a class="text-decoration-none text-light" href="{{URL::to('about')}}">about us</a></li>
+              <li> <a class="text-decoration-none text-light" href="<?php echo e(URL::to('about')); ?>">about us</a></li>
               <li> <a class="text-decoration-none text-light" href="javascript:void(0)">compare service</a></li>
               <li> <a class="text-decoration-none text-light" href="javascript:void(0)">our mission</a></li>
               <li> <a class="text-decoration-none text-light" href="javascript:void(0)">blog</a></li>
@@ -28,9 +28,9 @@
         <div class="footer-widget">
           <h3 class="text-white fw-bold">learning lesson</h3>
           <ul class="list-unstyled">
-            <li> <a class="text-decoration-none text-light" href="{{URL::to('images/img-profile.jpg')}}">how it
+            <li> <a class="text-decoration-none text-light" href="<?php echo e(URL::to('images/img-profile.jpg')); ?>">how it
                 works</a></li>
-            <li> <a class="text-decoration-none text-light" href="{{URL::to('images/img-profile.jpg')}}">F.A.Q</a></li>
+            <li> <a class="text-decoration-none text-light" href="<?php echo e(URL::to('images/img-profile.jpg')); ?>">F.A.Q</a></li>
           </ul>
         </div>
       </div>
@@ -99,4 +99,4 @@
       </a>
     </div>
   </div>
-</footer>
+</footer><?php /**PATH /home/kenny/Desktop/WWW/web-contact-registration/resources/views/components/footer.blade.php ENDPATH**/ ?>

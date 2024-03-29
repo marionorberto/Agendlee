@@ -1,6 +1,5 @@
-@extends('layout.main', ['username' => $username])
-@section('username')
-@section('content')
+<?php $__env->startSection('username'); ?>
+<?php $__env->startSection('content'); ?>
 <main>
 
   <section class="s1 d-flex justify-content-around align-items-center">
@@ -20,7 +19,7 @@
       </form>
     </div>
     <div class="floating-image-container">
-      <img class="img-schedule" src="{{URL::to('images/schedule.svg')}}" alt="" srcset="">
+      <img class="img-schedule" src="<?php echo e(URL::to('images/schedule.svg')); ?>" alt="" srcset="">
     </div>
   </section>
   <section>
@@ -58,6 +57,7 @@
     </div>
   </section>
 </main>
-@component('components.footer')
-@endcomponent
-@endsection
+<?php $__env->startComponent('components.footer'); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.main', ['username' => $username], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/kenny/Desktop/WWW/web-contact-registration/resources/views/index.blade.php ENDPATH**/ ?>

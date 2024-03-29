@@ -42,8 +42,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 }
 
 table {
-  margin: 50px auto;
-  max-width: 900px;
+  margin: 50px auto 10rem auto;
+  max-width: 85em;
   outline: 1px solid #ccc;
 }
 
@@ -146,8 +146,8 @@ footer {
   padding-right: 30px;
   padding-left: 30px;
   padding-bottom: 30px;
-  font-weight: 500;
-  font-size: 1.3rem;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .img-login{
@@ -214,9 +214,92 @@ footer {
     transform: translateY(-10px);
 }
 
+.alert{
+  margin: 50px auto;
+  max-width: 900px;
+  opacity: 80%;
+  text-align: center;
+}
+
 .textarea-coment {
   outline: 1px solid #ccc;
   padding: 17px;
   border-radius: 7px;
 }
 
+.card-profile {
+  width: 40rem;
+  margin: 7rem auto;
+}
+
+.card-profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 15px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) ;
+}
+
+.form-create-contact{
+  outline: 1px solid #ccc;
+  padding: 18px 50px;
+  background-color: white;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.nav-a:hover{
+ color: #925ADD;
+}
+
+.nav-a{
+ color: black;
+}
+.ative {
+ color: #2a0343;
+}
+
+.profile-container{
+  padding: 80px 30px;
+  width: 80rem;
+  margin: 50px auto;
+  background-color: #b3b3b3;
+  opacity: 90%;
+  margin-bottom: 10rem;
+}
+
+.img-profile {
+  width: 13rem;
+  height: 12rem;
+  border-radius: 8px;
+}
+
+.input-profile > input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 8px;
+  color: white;
+}
+
+
+.input-profile > label {
+  color: white;
+}
+
+.container-input-profile{
+  width: 60%;
+}
+
+.container-img{
+  height: 18rem;
+  width: 15rem;
+  background-color: #3e3c3e;
+  padding: 10px;
+}
+
+.container-input-profile{
+  background-color: #3e3c3e;
+  padding: 15px 20px;
+  border-radius: 5px;
+}

@@ -40,3 +40,10 @@
     - Isso permitirá que você aprimore continuamente a experiência do usuário.
 
 Lembre-se de manter a interface do usuário intuitiva e fácil de usar. Teste as funcionalidades regularmente para garantir que o site seja eficiente e atenda às necessidades dos usuários.
+
+
+[] autentication(session) login
+[] mail confirmation
+[] index layout completation
+[] view layout completation
+[] remembering birthday contact with login

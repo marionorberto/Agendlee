@@ -2,63 +2,103 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class contactController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        return view('contact.index');
-    }
+  public function __construct()
+  {
+    $this->middleware('first');
+  }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+  public function index()
+  {
+    $contacts = Contact::all();
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    return view('contact.index', compact('contacts'));
+  }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+  public function create()
+  {
+    return view('contact.create');
+  }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
+  public function store(Request $request)
+  {
+    $contact = new Contact();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+    $contact->name = $request->input('name');
+    $contact->nickname = $request->input('nickname');
+    $contact->email = $request->input('email');
+    $contact->sex = $request->input('sex');
+    $contact->phone = $request->input('phone');
+    $contact->phone_alternative = $request->input('phone_alternative');
+    $contact->web_address = $request->input('web_address');
+    $contact->address = $request->input('address');
+    $contact->birthday = $request->input('birthday');
+    $contact->note = $request->input('note');
+    $contact->emergency_contact = $request->input('emergency_contact') ? '1' :  '0';
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    $contact->save();
+
+    $contacts = Contact::all();
+
+    return view('contact.index', compact('contacts'));
+  }
+
+  public function show(string $id)
+  {
+    $contact = Contact::find($id);
+
+    if ($contact == null) return;
+
+    return view('contact.show', compact('contact'));
+  }
+
+  public function edit(string $id)
+  {
+    $contact = Contact::find($id);
+
+    if ($contact == null) return;
+
+    return view('contact.edit', compact('contact'));
+  }
+
+  public function update(Request $request, string $id)
+  {
+    $contact = Contact::find($id);
+
+    if ($contact == null) return;
+
+    $contact->name = $request->input('name');
+    $contact->nickname = $request->input('nickname');
+    $contact->email = $request->input('email');
+    $contact->sex = $request->input('sex');
+    $contact->phone = $request->input('phone');
+    $contact->phone_alternative = $request->input('phone_alternative');
+    $contact->web_address = $request->input('web_address');
+    $contact->birthday = $request->input('birthday');
+    $contact->address = $request->input('address');
+    $contact->note = $request->input('note');
+    $contact->emergency_contact = $request->input('emergency_contact') ? '1' :  '0';
+
+    $contact->save();
+
+    $contacts = Contact::all();
+    return view('contact.index', compact('contacts'));
+  }
+
+  public function destroy(string $id)
+  {
+    $contact = Contact::find($id);
+
+    if ($contact == null) return;
+
+    $contact->delete();
+
+    $contacts = Contact::all();
+
+    return view('contact.index', compact('contacts'));
+  }
 }
