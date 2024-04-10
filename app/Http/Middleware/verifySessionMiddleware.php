@@ -13,7 +13,7 @@ class verifySessionMiddleware
   public function handle(Request $request, Closure $next): Response
   {
     $isSessionLoginExisting = session()->exists('loginSession');
-    if (!$isSessionLoginExisting) return redirect()->route('home');
+    if (!$isSessionLoginExisting) return redirect()->route('login');
     Log::debug(session()->get('loginSession'));
 
     return $next($request);

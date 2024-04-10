@@ -1,11 +1,11 @@
-@extends('layout.main', ['username' => $username])
-@section('username')
+@extends('layout.main')
 @section('content')
 <main>
 
-  <section class="s1 d-flex justify-content-around align-items-center">
+  <section class="d-flex justify-content-around align-items-center">
     <div>
-      <h1 class="text-big lh-sm"> Manage your schedule<br> everywhere online</h1>
+      <h1 class="text-big lh-sm">
+        Manage your schedule<br> everywhere online</h1>
       <p class="text-justified text-muted fs-5">
         Managing your schedule has never been easier. With our<br>
         intuitive platform, you have full control of your<br>
@@ -25,8 +25,8 @@
   </section>
   <section>
     <div class="container pt-5 pb-5">
-      <h2 class="text-center mt-4 mb-4 fs-1">How to use it </h2>
-      <div class="mb-5 pb-4  mt-5 d-flex justify-content-around align-items-center">
+      <h2 class="text-center mt-4 gap-1  mb-4 gap-1  fs-1">How to use it </h2>
+      <div class="mb-2 pb-1 gap-1   mt-5 d-flex justify-content-around align-items-center">
 
         <div class="process-panel d-flex flex-column justify-content-center align-item-around">
           <div class="process-panel-text-step">
@@ -53,6 +53,84 @@
           <h2 class="">claim your reward </h2>
           <p class="">Higher conversion rates means you get more business from your cur in rent traffic and reduce cost
             peple cost per acquisition.this improves your ROI significantly.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-3 pb-3">
+      <h2 class="text-center mt-4 gap-1  mb-4 gap-1  fs-1">What people thing </h2>
+      <div class="row row-cols-auto gap-4 ms-auto me-auto">
+        <div class="d-flex flex-column col-md-4 p-2 rounded-2 div-witness">
+          <p class="fw-lighter">"ipsum adipisicing elit. Vero minima. Architecto, culpa doloremque! Quasi, nisi
+            autem."
+          </p>
+          <div class="d-flex gap-2 align-items-center  align-content-center justify-content-start">
+            <img src="{{URL::to('images/img-profile.jpg')}}" alt="profile-page-img" class="witness-img">
+            <div>
+              <span>Adam Wathan</span>
+              <h5 class="fw-medium"><span class="text-muted">creator of</span> Tailwind css</h5>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column col-md-4 p-2 rounded-2 div-witness">
+          <p>"ipsum adipisicing elit. Vero minima. Architecto, culpa doloremque! Quasi, nisi
+            autem."
+          </p>
+          <div class="d-flex gap-2 align-items-center  align-content-center justify-content-start">
+            <img src="{{URL::to('images/img-profile.jpg')}}" alt="profile-page-img" class="witness-img">
+            <div>
+              <span>Adam Wathan</span>
+              <h5>creator of Tailwind css</h5>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column col-md-4 p-2 rounded-2 div-witness">
+          <p>"ipsum adipisicing elit. Vero minima. Architecto, culpa doloremque! Quasi, nisi
+            autem."
+          </p>
+          <div class="d-flex gap-2 align-items-center  align-content-center justify-content-start">
+            <img src="{{URL::to('images/img-profile.jpg')}}" alt="profile-page-img" class="witness-img">
+            <div>
+              <span>Adam Wathan</span>
+              <h5>creator of Tailwind css</h5>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column col-md-4 p-2 rounded-2 div-witness">
+          <p>"ipsum adipisicing elit. Vero minima. Architecto, culpa doloremque! Quasi, nisi
+            autem."
+          </p>
+          <div class="d-flex gap-2 align-items-center  align-content-center justify-content-start">
+            <img src="{{URL::to('images/img-profile.jpg')}}" alt="profile-page-img" class="witness-img">
+            <div>
+              <span>Adam Wathan</span>
+              <h5>creator of Tailwind css</h5>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column col-md-4 p-2 rounded-2 div-witness">
+          <p>"ipsum adipisicing elit. Vero minima. Architecto, culpa doloremque! Quasi, nisi
+            autem."
+          </p>
+          <div class="d-flex gap-2 align-items-center  align-content-center justify-content-start">
+            <img src="{{URL::to('images/img-profile.jpg')}}" alt="profile-page-img" class="witness-img">
+            <div>
+              <span>Adam Wathan</span>
+              <h5>creator of Tailwind css</h5>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column col-md-4 p-1 rounded-2 div-witness">
+          <p>"ipsum adipisicing elit. Vero minima. Architecto, culpa doloremque! Quasi, nisi
+            autem."
+          </p>
+          <div class="d-flex gap-2 align-items-center  align-content-center justify-content-start">
+            <img src="{{URL::to('images/img-profile.jpg')}}" alt="witness-img" class="witness-img">
+            <div>
+              <span>Adam Wathan</span>
+              <h5>creator of Tailwind css</h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>

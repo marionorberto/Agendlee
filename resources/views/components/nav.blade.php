@@ -8,11 +8,34 @@
         href="{{route('contact.index')}}">Contacts</a></li>
     <li><a class="text-decoration-none nav-a {{request()->routeIs('about') ? 'ative' : ''}}"
         href="http://localhost:8000/about">About</a></li>
+
+    @if (!Session::has('loginSession'))
     <li><a class="text-decoration-none nav-a {{request()->routeIs('login') ? 'ative' : ''}}"
         href="http://localhost:8000/login">Login</a></li>
     <li><a class="text-decoration-none btn-register-home" href="http://localhost:8000/register">Register</a></li>
-    <li>
-      @yield('username')
-    </li>
+    @endif
+
+    @if (Session::has('loginSession'))
+    <div class="dropdown m-0">
+      <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="{{URL::to('images/img-profile.jpg')}}" alt="profile-page-img" class="img-profile-page">
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item">
+          {{
+          $userSession['username']
+          }}
+        </li>
+        <li class="dropdown-item">
+          {{
+          $userSession['email']
+          }}
+        </li>
+        <hr class="dropdown-divider">
+        <li><a class="dropdown-item fw-bold" href="http://localhost:8000/logout">Logout</a></li>
+      </ul>
+    </div>
+    @endif
+
   </ul>
 </nav>

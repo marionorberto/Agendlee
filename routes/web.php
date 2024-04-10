@@ -9,12 +9,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
   if (session()->exists('loginSession')) {
     $userSession = session()->get('loginSession');
+    return view(
+      'index',
+      compact('userSession')
+    );
   }
 
   return view(
     'index'
   );
 })->name('home');
+
+Route::get('/logout',  function () {
+  session()->flush('loginSession');
+
+  return redirect()->route('login');
+});
 
 Route::get('/login', [loginController::class, 'index'])->name('login');
 Route::post('/login', [loginController::class, 'login']);
@@ -27,6 +37,9 @@ Route::get('/password-recovering', function () {
 })->name('password-recovering');
 
 Route::get('/about', function () {
+  if (!session()->has('loginSession'))
+    session()->flush();
+
   return view('about');
 })
   ->name('about')
