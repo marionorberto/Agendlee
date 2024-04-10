@@ -23,12 +23,12 @@
       <ul class="dropdown-menu">
         <li class="dropdown-item">
           {{
-          $userSession['username']
+          @Session::get('loginSession')['username']
           }}
         </li>
         <li class="dropdown-item">
           {{
-          $userSession['email']
+          @Session::get('loginSession')['email']
           }}
         </li>
         <hr class="dropdown-divider">

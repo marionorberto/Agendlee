@@ -22,11 +22,11 @@
       </button>
       <ul class="dropdown-menu">
         <li class="dropdown-item">
-          <?php echo e($userSession['username']); ?>
+          <?php echo e(@Session::get('loginSession')['username']); ?>
 
         </li>
         <li class="dropdown-item">
-          <?php echo e($userSession['email']); ?>
+          <?php echo e(@Session::get('loginSession')['email']); ?>
 
         </li>
         <hr class="dropdown-divider">

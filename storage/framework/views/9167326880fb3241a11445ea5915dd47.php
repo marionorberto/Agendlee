@@ -16,10 +16,13 @@
 </head>
 
 <body>
+  <?php if(Session::has('loginSession')): ?>
   <?php $__env->startComponent('components.nav'); ?>
-  <?php $__env->slot('userSession', $userSession); ?>
-  <?php $__env->endSlot(); ?>
   <?php echo $__env->renderComponent(); ?>
+  <?php else: ?>
+  <?php $__env->startComponent('components.nav'); ?>
+  <?php echo $__env->renderComponent(); ?>
+  <?php endif; ?>
   <?php echo $__env->yieldContent('content'); ?>
   <script lang="javascript" src="<?php echo e(URL::to('js/bootstrap.min.js')); ?>"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

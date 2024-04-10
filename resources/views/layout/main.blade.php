@@ -16,10 +16,13 @@
 </head>
 
 <body>
+  @if(Session::has('loginSession'))
   @component('components.nav')
-  @slot('userSession', $userSession)
-  @endslot
   @endcomponent
+  @else
+  @component('components.nav')
+  @endcomponent
+  @endif
   @yield('content')
   <script lang="javascript" src="{{URL::to('js/bootstrap.min.js')}}"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
